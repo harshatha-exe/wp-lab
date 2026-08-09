@@ -1,0 +1,10 @@
+1. Develop a real-time weather update system that broadcasts weather information from a weather station to multiple devices
+ on a local network using UDP.
+2.Implement a TCP-based multi-client auction system where clients can place bids, and the server tracks the highest bid 
+and notifies all clients of the current status.
+3.Develop a Java Swing program that simulates raindrops falling from the top of the window. Each raindrop should move 
+vertically at a random speed, and new raindrops should appear continuously. The raindrops should disappear once they reach
+ the bottom of the window.
+4.Design a currency converter using Java Swing. The form should allow users to input an amount, a dropdown to select a 
+currency to convert from and to (e.g., USD to EUR), and a "Convert" button. Display the converted amount based on 
+predefined exchange rates.

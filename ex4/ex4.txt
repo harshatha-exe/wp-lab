@@ -1,0 +1,69 @@
+Exception handling
+
+1. File Factorials.java contains a program that calls the factorial method of the MathUtils class to compute the factorials
+ of integers entered by the user. Save these files to your directory and study the code in both, then compile and run 
+ Factorials to see how it works. Try several positive integers, then try a negative number. You should find that it works 
+ for small positive integers (values < 17), but that it returns a large negative value for larger integers and that it 
+ always returns 1 for negative integers.
+i. Returning 1 as the factorial of any negative integer is not correct—mathematically, the factorial function is not 
+defined for negative integers. To correct this, you could modify your factorial method to check if the argument is 
+negative, but then what? The method must return a value, and even if it prints an error message, whatever value is 
+returned could be misconstrued. Instead it should throw an exception indicating that something went wrong so it could not 
+complete its calculation. You could define your own exception class, but there is already an exception appropriate for 
+this situation—
+IllegalArgumentException, which extends RuntimeException. Modify your program as follows:
+ Modify the header of the factorial method to indicate that factorial can throw an IllegalArgumentException.  Modify the 
+ body of factorial to check the value of the argument and, if it is negative, throw an IllegalArgumentException. Note that
+  what you pass to throw is actually an instance of the IllegalArgumentException class, and that the constructor takes a 
+  String parameter. Use this parameter to be specific about what the problem is.
+ Compile and run your Factorials program after making these changes. Now when you enter a negative number an exception will
+  be thrown, terminating the program. The program ends because the exception is not caught, so it is thrown by the main 
+  method, causing a runtime error.  Modify the main method in your Factorials class to catch the exception thrown by 
+  factorial and print an appropriate
+message, but then continue with the loop. Think carefully about where you will need to put the try and catch.
+ii. Returning a negative number for values over 16 also is not correct. The problem is arithmetic overflow—the factorial 
+is bigger than can be represented by an int. This can also be thought of as an IllegalArgumentException—this factorial 
+method is only defined for arguments up to 16. Modify your code in factorial to check for an argument over 16 as well as 
+for a negative argument. You should throw an IllegalArgumentException in either case, but pass different messages to the 
+constructor so that the problem is clear.
+
+2. Write a program that will read in a file of student academic credit data and create a list of students on academic 
+warning. The list of students on warning will be written to a file. Each line of the input file will contain the student 
+name (a single String with no spaces), the number of semester hours earned (an integer), the total quality points earned 
+(a double). The following shows part of a typical data file:
+Smith 27 83.7
+Jones 21 28.35
+Walker 96 182.4
+Doe 60 150
+The program should compute the GPA (grade point or quality point average) for each student (the total quality points divided by the number of semester hours) then write the student information to the output file if that student should be put on academic warning. A student will be on warning if he/she has a GPA less than 1.5 for students with fewer than 30 semester hours credit, 1.75 for students with fewer than 60 semester hours credit, and 2.0 for all other students. The file Warning.java contains a skeleton of the program. Do the following:
+1. Set up a Scanner object scan from the input file and a PrintWriter outFile to the output file inside the try clause (see the comments in the program). Note that you’ll have to create the PrintWriter from a FileWriter, but you can still do it in a single statement.
+2. Inside the while loop add code to read and parse the input—get the name, the number of credit hours, and the number of quality points. Compute the GPA, determine if the student is on academic warning, and if so write the name, credit hours, and GPA (separated by spaces) to the output file.
+3. After the loop close the PrintWriter.
+4. Think about the exceptions that could be thrown by this program:
+• A FileNotFoundException if the input file does not exist
+• A NumberFormatException if it can’t parse an int or double when it tries to – this indicates an error in the input file format
+• An IOException if something else goes wrong with the input or output stream
+Add a catch for each of these situations, and in each case give as specific a message as you can. The program will terminate if any of these exceptions is thrown, but at least you can supply the user with useful information.
+5. Test the program. Test data is in the file students.dat. Be sure to test each of the exceptions as well.
+
+
+Regular Expression
+
+1.In an accountgenerator page if you type in a first name and then a space it will accept that as a valid input for the 
+name even though no surname has been provided. Use a regular expression to stop this from happening. You must only accept 
+one or more characters followed by a space character followed by one or more characters. Place the regular expression in 
+an if statement that will display an “Incorrect format for name” message if the input does not match the regular 
+expression.
+ 2. Your teacher just gave you the answers to the final exam (hypothetically of course)! The only problem is that the 
+ answer key is in a secret code, with numbers and other characters that will never be answer choices. The only hint at 
+ this time that the teacher gives you is that any character in the key that she gave you that is a, A, b, B, c, C, d, D, 
+ e, E, f, or F is part of the answer key in the order it appears in the coded answer key and any other character is not a 
+ part of the answer key.Each character is on its own line in the file provided by the teacher. To decipher the coded 
+ answer key, complete the program below so that it properly reads each line of the fileCodedAnswerKey as a stringline(this
+  part is done for you), use a regular expression to check if line is 1 of the 12 options for an answer on the exam if it 
+  is, add it to the stringanswers.Finally, print outanswers.
+3. It's almost time for your final exam and your teacher just announced that the answers only range from [a-dA-D]!She 
+gives you one last instruction for decoding her answer key, “replace all e's with b's, all E's with A's, all f's with c's 
+and all F's with D's. Then make the answer string all lower case so you can use it on the exam. If your answers are not 
+all lower case, you may not use the answer sheet on the exam!” Write a static method finalAnswers that takes in String 
+answers that you created in problem 2 and returns the string changed according to the teacher's final announcements.

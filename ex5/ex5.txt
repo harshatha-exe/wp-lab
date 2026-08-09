@@ -1,0 +1,7 @@
+Multithreading
+
+1) Write a Java program that creates three threads. First thread displays “Hello!” every one second, the second thread displays “Happy Holidays!” every two seconds and “Enjoy!” every 5 seconds.
+2) Write a Java program to create five threads with different priorities. Send two threads of the highest priority to sleep state. Check the aliveness of the threads and mark which thread is long lasting.
+3) Write a java program that implements a multi-thread applications that has three threads. First thread generates random integer every 1 second and if the value is even, second thread computes the square of the number and prints. If the value is odd, the thread will compute and print the cube of the number.
+4) Create an application that executes two threads. First thread displays the alphabets A to Z at every one second. The second thread will display the alphabets Z to A at every two seconds. Both the threads need to synchronize with each other for printing alphabets. The second thread has to wait until the first thread finishes its execution. The application waits for all thread to finish the execution.
+5) Write a Java program to simulate a shared resource (e.g., a bank account) that can be accessed by multiple threads. Implement thread synchronization mechanisms to prevent race conditions and ensure data integrity. The program should allow multiple threads to deposit and withdraw money from the account, and the balance should be updated correctly even under concurrent access.(Interprocess communication)

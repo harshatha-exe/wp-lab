@@ -1,0 +1,19 @@
+WORDS IN ALPHABETICAL ORDER
+--------------------------------
+a : 1
+easy : 1
+fun : 1
+is : 3
+java : 2
+language : 1
+programming : 2
+
+WORDS IN FREQUENCY ORDER
+--------------------------------
+is : 3
+java : 2
+programming : 2
+a : 1
+easy : 1
+fun : 1
+language : 1

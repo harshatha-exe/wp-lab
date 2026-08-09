@@ -1,0 +1,40 @@
+1.Implement the following using Constructors: Create a creditcard class which has data fields like owner 
+of type person, balance of type money and creditlimit of type money. It should include constructor that 
+has two parameters, a reference to a money object to initialize the creditlimit. The balance can be 
+initialized to a money object with a value of zero. If creditcard should be customized with own 
+creditlimit and balance create a new object of each using copy constructor in the money class. 
+Display the information of creditcard.
+
+2.Create a class to print an integer and a character with two methods having the same name but different 
+sequence of the integer and the character parameters. For example, if the parameters of the first method 
+are of the form (int n, char c), then that of the second method will be of the form (char c, int n).
+
+3.CREATE A class called Calculator with the following methods:
+· A static method called powering (int num1,int num2).This method should return num1 to the
+power num2.
+· A static method called powerDouble(double num1,double num2). This method should return
+num1 to the power num2.
+· Invoke both the methods and test the functionalities.
+
+4.Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with 
+subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and 
+fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+
+5.Create a Java program that models a bank account system. The system should have classes for Account, 
+SavingsAccount, and CurrentAccount. Each account should have a balance, accountNumber, and interestRate
+(private). Account class should have methods calculate interest, validate deposit amount and updatebalance 
+(protected).The SavingsAccount class should have an additional minimumBalance requirement. The 
+CurrentAccount class should have an additional overdraftLimit. 
+
+6. Write a Java program to create a banking system with three classes - Bank, SavingsAccount, and 
+CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be 
+an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and 
+CurrentAccount should implement the Account interface and have their own unique methods.
+
+7. Write a Java program to calculate the percentage of marks obtained in three subjects by student A and in four subjects by student B, each out 
+of 100. Create an abstract class 'Marks' with an abstract method 'getPercentage', inherited by two other classes 'A' and 
+'B' each having a method with the same name which returns the percentage of the students.
+
+8. Write a program for onlinebookshop which sells and the add college books and story books as subclasses of the Book 
+class which holds the details about book name, publisher, Published year,edition and price. Implement the polymorphic 
+behavior through overriding methods. Explore the usage of Upcasting and Downcasting.
