@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head><title>Registration</title></h:head>
+<h:body>
+    <h2>Sports Registration</h2>
+    <h:form>
+        <h:panelGrid columns="3">
+            Name: 
+            <h:inputText id="name" value="#{sportsBean.studentName}" required="true" requiredMessage="Name required" />
+            <h:message for="name" style="color:red" />
+
+            Roll Number: 
+            <h:inputText id="roll" value="#{sportsBean.rollNumber}" required="true" requiredMessage="Roll required" />
+            <h:message for="roll" style="color:red" />
+
+            Department: 
+            <h:inputText id="dept" value="#{sportsBean.department}" required="true" />
+            <h:message for="dept" style="color:red" />
+
+            Event: 
+            <h:selectOneMenu id="event" value="#{sportsBean.sportsEvent}" required="true">
+                <f:selectItem itemLabel="Select Event" itemValue="" />
+                <f:selectItem itemValue="Cricket" itemLabel="Cricket" />
+                <f:selectItem itemValue="Football" itemLabel="Football" />
+                <f:selectItem itemValue="Basketball" itemLabel="Basketball" />
+                <f:selectItem itemValue="Athletics" itemLabel="Athletics" />
+            </h:selectOneMenu>
+            <h:message for="event" style="color:red" />
+
+            Contact: 
+            <h:inputText id="contact" value="#{sportsBean.contactNumber}" required="true" />
+            <h:message for="contact" style="color:red" />
+        </h:panelGrid>
+        <h:commandButton value="Register" action="#{sportsBean.register}" />
+    </h:form>
+</h:body>
+</html>

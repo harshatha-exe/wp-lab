@@ -1,0 +1,15 @@
+ SERVLET BASED WEB APPLICATION
+1. Develop a code for creating cookies with the name of the person and secret code at the server, after getting these 
+details from the client using HTML form. Use another servlet program to get the information stored in the cookie and 
+display the details.
+2. Develop a simple User Login system using Java Servlets. Design a registration page where users can enter their name, 
+password, and email. Upon submission, the data will be stored in a database. After successful registration, it redirects 
+to a login page where the users can enter their username and password which will be checked against the data in the 
+database. If the details are valid, a session is created for the user and then the user's profile page will be displayed.
+ When the user clicks the logout button, the user's session will be invalidated and redirected to the login page.
+3. Create a Shopping Cart System using Java Servlets that allows users to:
+
+View products from a product catalog.
+Add products to their shopping cart.
+View and modify their cart (update quantity or remove items).
+Checkout by providing their details, which will be stored in the database.

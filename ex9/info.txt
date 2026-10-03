@@ -1,0 +1,4 @@
+bin zip archive from https://maven.apache.org/download.cgi
+mvn clean package (or) shift+right click -> copy as path -> & <copied> clean package
+place .war file in /webapps
+set java_home and then run startup.bat in cmd

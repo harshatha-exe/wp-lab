@@ -1,0 +1,10 @@
+1.Design a JSF-based web application for Sports Event Registration with database connectivity. Create a JSF page
+ named sportsRegistration.xhtml using JSF UI components to collect Student Name, Roll Number, Department, 
+ Sports Event (Cricket, Football, Basketball, Athletics), and Contact Number. Use appropriate JSF components 
+ such as h:inputText, h:selectOneMenu, f:selectItem, h:commandButton, and JSF validation tags to validate the 
+ input fields, ensuring that no field is empty and that Roll Number and Contact Number contain numeric values.
+
+Create a JSF managed/backing bean named SportsRegistrationBean to hold the form data and handle the registration
+ action. The bean should use JDBC to connect to the database and insert the validated data into the 
+ sports_registration table. On successful registration, navigate to success.xhtml; otherwise, navigate to 
+ error.xhtml.
